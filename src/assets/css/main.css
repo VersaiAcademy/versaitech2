@@ -9605,3 +9605,64 @@ only screen and (min-width: 768px) and (max-width: 991px),
     height: calc(300px + 1vw);
   }
 }
+
+
+.img-web {
+  height: 100%;
+  width: 100%;
+  
+}
+
+.img-logo {
+  height: 100%;
+  width: 100%;
+}
+
+.img-poster {
+  height: 100%;
+  width: 100%;
+ 
+}
+
+.active-tab-btn {
+  background: linear-gradient(to right, var(--tg-gradient-1), var(--tg-gradient-2), var(--tg-gradient-2), var(--tg-gradient-1));
+  color: var(--white) !important;
+  border: solid var(--tg-gradient-1)e;
+}
+
+.inactive-tab-btn {
+  background-color: transparent;
+   border:solid var(--tg-gradient-1);
+  color: var(--black) !important;
+  transition: all 0.3s ease;
+}
+
+.inactive-tab-btn:hover {
+  background: linear-gradient(to right, var(--tg-gradient-1), var(--tg-gradient-2));
+  color: var(--white) !important;
+  border:solid var(--tg-gradient-1);
+}
+
+
+.text-gradient {
+  background: linear-gradient(to right, var(--tg-gradient-1), var(--tg-gradient-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, var(--tg-gradient-1), var(--tg-gradient-2));
+  color: var(--white) !important;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.btn-gradient:hover {
+  opacity: 0.9;
+}
+
+

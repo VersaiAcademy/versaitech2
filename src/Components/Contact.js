@@ -208,6 +208,7 @@ const Contact = () => {
                 <div className="col-xl-8 col-lg-8">
                   <div className="tg-contact-form">
                     <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                     <input type="hidden" name="access_key" value="1acf049e-839f-455b-a63e-3744d67404ae"></input>
                       <div className="row">
                         <div className="col-xl-6 col-lg-6 col-md-6 mb-20">
                           <div className="tg-contact-input-box-2">

@@ -87,14 +87,16 @@ body {
 
 hr {
     margin: 1rem 0;
-    color: inherit;
-    background-color: currentColor;
+   
+    background-image: linear-gradient(to right, var(--tg-gradient-1), var(--tg-gradient-2), var(--tg-gradient-2), var(--tg-gradient-1));
     border: 0;
     opacity: .25
+    
 }
 
 hr:not([size]) {
-    height: 1px
+    height: 3px
+    
 }
 
 .h1,

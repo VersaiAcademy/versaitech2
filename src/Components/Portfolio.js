@@ -28,7 +28,48 @@ import '../assets/css/versaicommon.css';
 
 import img1 from '../assets/img/logo/logo-white-img1.svg';
 import img2 from '../assets/img/logo/logo-white-img2.svg';
-import img76 from '../Components/img76.jpg';
+import g1 from '../assets/img/website/g1.png'
+import g2 from '../assets/img/website/g2.jpg'
+import g4 from '../assets/img/website/g4.jpg'
+import g5 from '../assets/img/website/g5.jpg'
+import g6 from '../assets/img/website/g6.jpg'
+import g7 from '../assets/img/website/g7.jpg'
+import g8 from '../assets/img/website/g8.jpg'
+import logo1 from '../assets/logo/logo1.jpg'
+import logo2 from '../assets/logo/logo2.jpg'
+import logo3 from '../assets/logo/logo3.jpg'
+import logo4 from '../assets/logo/logo4.jpg'
+import logo5 from '../assets/logo/logo5.jpg'
+import logo6 from '../assets/logo/logo6.jpg'
+import logo7 from '../assets/logo/logo7.jpg'
+import logo8 from '../assets/logo/logo8.jpg'
+import logo9 from '../assets/logo/logo9.webp'
+import logo10 from '../assets/logo/logo10.jpg'
+import logo11 from '../assets/logo/logo11.jpg'
+import logo12 from '../assets/logo/logo12.jpg'
+import logo13 from '../assets/logo/logo13.jpg'
+import poster1 from '../assets/img/poster/poster1.jpg'
+import poster2 from '../assets/img/poster/poster2.jpg'
+import poster3 from '../assets/img/poster/poster3.jpg'
+import poster4 from '../assets/img/poster/poster4.jpg'
+import poster5 from '../assets/img/poster/poster5.jpg'
+import poster6 from '../assets/img/poster/poster6.jpg'
+import poster7 from '../assets/img/poster/poster7.jpg'
+import poster8 from '../assets/img/poster/poster8.jpg'
+import poster9 from '../assets/img/poster/poster9.jpg'
+import poster10 from '../assets/img/poster/poster11.jpg'
+import poster11 from '../assets/img/poster/poster11.jpg'
+import poster12 from '../assets/img/poster/poster12.jpg'
+import poster13 from '../assets/img/poster/poster13.jpg'
+import poster14 from '../assets/img/poster/poster14.jpg'
+import poster15 from '../assets/img/poster/poster15.jpg'
+import poster16 from '../assets/img/poster/poster16.jpg'
+import poster17 from '../assets/img/poster/poster17.jpg'
+import poster18 from '../assets/img/poster/poster18.jpg'
+
+
+
+
 
 
 const Portfolio = () => {
@@ -50,6 +91,9 @@ const Portfolio = () => {
           </svg>
         </button>
       </div>
+
+
+      
 
       {/* Header */}
       <header>
@@ -139,6 +183,7 @@ const Portfolio = () => {
      
      
                  </header>
+                 
 
       <main>
         {/* Breadcrumb area */}
@@ -160,359 +205,358 @@ const Portfolio = () => {
         </div>
 
         {/* Portfolio content */}
-        <div className="container mt-50">
-          <div className="d-flex flex-column gap-3 align-items-center">
-            <h5 className="use-gradisub">Our Core Services</h5>
-            <h2 className="we-offer">We offer expert solutions in design, development, and branding</h2>
-            <div className="mt-20 mb-20 four-btn">
-              <button 
-                className={`portfolio-nav ${activeTab === 'overview' ? 'active' : ''}`}
-                onClick={() => handleTabChange('overview')}
-              >
-                Web Development
-              </button>
-              <button 
-                className={`portfolio-nav ${activeTab === 'logo-designed' ? 'active' : ''}`}
-                onClick={() => handleTabChange('logo-designed')}
-              >
-                Logo Designing
-              </button>
-              <button 
-                className={`portfolio-nav ${activeTab === 'poster-desined' ? 'active' : ''}`}
-                onClick={() => handleTabChange('poster-desined')}
-              >
-                Poster Designing
-              </button>
+        
+      </main>
+      
+  {/* Our Core Services Section */}
+  <section className="core-services-section py-5">
+  <div className="container text-center">
+    <h5 className="use-gradi">Our Core Services</h5>
+    <h2 className="fw-bold mb-4">
+      We Offer Expert Solutions In Design, Development, And Branding
+    </h2>
+
+    <div className="d-flex justify-content-center gap-3 flex-wrap mb-5">
+  <button
+    className={`btn rounded-pill px-4 ${
+      activeTab === 'web' ? 'active-tab-btn' : 'inactive-tab-btn'
+    }`}
+    onClick={() => setActiveTab('web')}
+  >
+    Web Development
+  </button>
+  <button
+    className={`btn rounded-pill px-4 ${
+      activeTab === 'logo' ? 'active-tab-btn' : 'inactive-tab-btn'
+    }`}
+    onClick={() => setActiveTab('logo')}
+  >
+    Logo Designing
+  </button>
+  <button
+    className={`btn rounded-pill px-4 ${
+      activeTab === 'poster' ? 'active-tab-btn' : 'inactive-tab-btn'
+    }`}
+    onClick={() => setActiveTab('poster')}
+  >
+    Poster Designing
+  </button>
+</div>
+
+
+    <div className="mb-4">
+  {activeTab === 'web' && (
+    <>
+      <h3 className="fw-semibold">Modern Web Development Solutions
+</h3>
+      <p className="text-muted">
+        
+We deliver fast, secure, and scalable web solutions using modern frameworks to enhance <br /> user experience and drive digital growth for businesses.
+      </p>
+    </>
+  )}
+
+  {activeTab === 'logo' && (
+    <>
+      <h3 className="fw-semibold">Custom Logo Designs That Define Your Brand</h3>
+      <p className="text-muted">
+      We craft unique, memorable logos that reflect your brand identity, build trust, and leave a <br />lasting impression across all platforms.
+      </p>
+    </>
+  )}
+
+  {activeTab === 'poster' && (
+    <>
+      <h3 className="fw-semibold">Innovative Poster Design Solutions</h3>
+      <p className="text-muted">
+        We create impactful, visually striking poster designs that capture attention, communicate <br /> your message clearly, and elevate your brand presence across all platforms.
+      </p>
+    </>
+  )}
+</div>
+
+
+    {/* Image Grid: 3 Columns */}
+   <div className="row g-4 justify-content-center">
+  {(
+    activeTab === 'web'
+      ? [g1, g2, g4, g5, g6, g7, g8]
+      : activeTab === 'logo'
+      ? [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13]
+      : [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8, poster9, poster11, poster12, poster13, poster14, poster15, poster16, poster17, poster18]
+  ).map((imgSrc, index) => {
+    const typeClass =
+      activeTab === 'web'
+        ? 'img-web'
+        : activeTab === 'logo'
+        ? 'img-logo'
+        : 'img-poster';
+
+    return (
+      <div className="col-md-4 col-sm-6" key={index}>
+        <img
+          src={imgSrc}
+          alt={`Project ${index + 1}`}
+          className={`img-fluid rounded shadow ${typeClass}`}
+        />
+      </div>
+    );
+  })}
+</div>
+
+  </div>
+</section>
+<div className="text-center py-5">
+  {activeTab === 'web' && (
+    <>
+      <h5 className="text-gradient">Step Into Success</h5>
+      <h1 className="fw-bold">Transforming Your Ideas into Reality</h1>
+      <p className="text-muted">
+        Schedule a free consultation with our team and let’s make your digital product or website come alive.
+      </p>
+      <button className="btn btn-gradient">Contact With Us</button>
+
+      <hr className="my-5" />
+
+      <h4 className="fw-bold">Frequently Asked Questions</h4>
+      <p className="text-muted">
+        Answer To Our Most Frequently Asked Questions are just one Click Away.
+      </p>
+      <hr className="my-5" />
+      <div className="accordion" id="faqWeb">
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="webHeading1">
+            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#webCollapse1">
+              Why Should I Choose Versai Technology?
+            </button>
+          </h2>
+          <div id="webCollapse1" className="accordion-collapse collapse show" data-bs-parent="#faqWeb">
+            <div className="accordion-body">
+              Versai Technology started with excellence in exhibition stall design and now brings you expert logo, web Design and Development services. Our goal is to craft creative, meaningful visuals that reflect your brand’s true identity and values.
             </div>
           </div>
-
-          {/* Content Area */}
-          <div id="content" className="content-section">
-            {activeTab === 'overview' && (
-              <div className="tg-sv-details-area fix pb-50">
-                <div className="terms-service">
-                  <div className="terms-cond">
-                    <div>
-                      <p className="tersm-para">Modern Web Development Solutions</p>
-                    </div>
-                    <p className="term-parades">
-                      We deliver fast, secure, and scalable web solutions using modern frameworks to enhance user experience and drive digital growth for businesses.
-                    </p>
-                  </div>
-                </div>
-        <div className="row">
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                       <img className="img-fluid" src={img76} alt="img76" />
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={g2} alt="Website example 2" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={g4} alt="Website example 3" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={g5} alt="Website example 4" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={g6} alt="Website example 5" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={g7} alt="Website example 6" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={g8} alt="Website example 7" /> */}
-                    </div>
-                  </div>
-                </div>
-
-                <TransformSection />
-                <FaqSection 
-                  faqs={[
-                    {
-                      question: "Why Should I Choose Versai Technology?",
-                      answer: "Versai Technology started with excellence in exhibition stall design and now brings you expert logo, web Design and Development services. Our goal is to craft creative, meaningful visuals that reflect your brand's true identity and values."
-                    },
-                    {
-                      question: "How Long Does Versai Technology Take to Development a Website?",
-                      answer: "At Versai Technology, you'll receive your initial web Design concepts within 2 working days after submitting the brief. With timely feedback, the full process including revisions, Development and final delivery takes around 10 to 12 days. Your quick response helps us deliver faster."
-                    },
-                    {
-                      question: "Can I upgrade my package during the order?",
-                      answer: "Yes, absolutely! You can upgrade your package at any point during the process. Simply pay the difference at the time of final delivery it's quick and hassle-free"
-                    },
-                    {
-                      question: "Does Versai Technology offer any discounts?",
-                      answer: "Yes, Versai Technology offers discounts from time to time. Contact us to learn about current promotions and special offers tailored for you."
-                    },
-                    {
-                      question: "How does Versai Technology offer such great value at this price?",
-                      answer: "At Versai Technology, we combine skilled expertise with efficient processes to keep costs low without compromising quality. Our streamlined approach and commitment to innovation allow us to deliver exceptional value. This means you get top-notch services at competitive prices."
-                    }
-                  ]}
-                />
-              </div>
-            )}
-
-            {activeTab === 'logo-designed' && (
-              <div className="tg-sv-details-area fix pb-50">
-                <div className="terms-service">
-                  <div className="terms-cond">
-                    <div>
-                      <p className="tersm-para">Custom Logo Designs That Define Your Brand</p>
-                    </div>
-                    <p className="term-parades">
-                      We craft unique, memorable logos that reflect your brand identity, build trust, and leave a lasting impression across all platforms.
-                    </p>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={asTravel} alt="AS Travel logo" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={balajiEnterprises} alt="Balaji Enterprises logo" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={fd} alt="FD logo" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={logo4} alt="Logo 4" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={logo5} alt="Logo 5" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={logo6} alt="Logo 6" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={logo7} alt="Logo 7" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={logo8} alt="Logo 8" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={logoSample} alt="Logo sample" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={shreeJeenFood} alt="Shree Jeen Food logo" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={sunsheraJpg} alt="Sunshera logo" /> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-4">
-                    <div className="card card-logo">
-                      <div className="card-body">
-                        {/* <img src={targetComputer} alt="Target Computer logo" /> */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <TransformSection />
-                <FaqSection 
-                  faqs={[
-                    {
-                      question: "Why Should I Choose Versai Technology?",
-                      answer: "Versai Technology started with excellence in exhibition stall design and now brings you expert logo and graphic design services. Our goal is to craft creative, meaningful visuals that reflect your brand's true identity and values."
-                    },
-                    {
-                      question: "How Long Does Versai Technology Take to Design a Logo?",
-                      answer: "At Versai Technology, you'll receive your initial logo concepts within 2 working days after submitting the brief. With timely feedback, the full process—including revisions and final delivery takes around 5 to 7 days. Your quick response helps us deliver faster."
-                    },
-                    {
-                      question: "Can I upgrade my package during the order?",
-                      answer: "Yes, absolutely! You can upgrade your package at any point during the process. Simply pay the difference at the time of final delivery it's quick and hassle-free"
-                    },
-                    {
-                      question: "Does Versai Technology offer any discounts?",
-                      answer: "Yes, Versai Technology offers discounts from time to time. Contact us to learn about current promotions and special offers tailored for you."
-                    },
-                    {
-                      question: "How does Versai Technology offer such great value at this price?",
-                      answer: "At Versai Technology, we combine skilled expertise with efficient processes to keep costs low without compromising quality. Our streamlined approach and commitment to innovation allow us to deliver exceptional value. This means you get top-notch services at competitive prices."
-                    }
-                  ]}
-                />
-              </div>
-            )}
-
-            {activeTab === 'poster-desined' && (
-              <div className="tg-sv-details-area fix pb-50">
-                <div className="terms-service">
-                  <div className="terms-cond">
-                    <div>
-                      <p className="tersm-para">Innovative Poster Design Solutions</p>
-                    </div>
-                    <p className="term-parades">
-                      We create impactful, visually striking poster designs that capture attention, communicate your message clearly, and elevate your brand presence across all platforms.
-                    </p>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster1} alt="Poster design 1" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster16} alt="Poster design 2" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster2} alt="Poster design 3" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster3} alt="Poster design 4" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster4} alt="Poster design 5" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster6} alt="Poster design 6" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster7} alt="Poster design 7" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster11} alt="Poster design 8" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster12} alt="Poster design 9" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster15} alt="Poster design 10" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster8} alt="Poster design 11" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster18} alt="Poster design 12" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster13} alt="Poster design 13" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster17} alt="Poster design 14" /> */}
-                    </div>
-                  </div>
-                  <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <div className="card service-card">
-                      {/* <img src={poster9} alt="Poster design 15" /> */}
-                    </div>
-                  </div>
-                </div>
-
-                <TransformSection />
-                <FaqSection 
-                  faqs={[
-                    {
-                      question: "Why Should I Choose Versai Technology?",
-                      answer: "Versai Technology started with excellence in exhibition stall design and now brings you expert Poster and graphic design services. Our goal is to craft creative, meaningful visuals that reflect your brand's true identity and values."
-                    },
-                    {
-                      question: "How Long Does Versai Technology Take to Design a Poster?",
-                      answer: "At Versai Technology, you'll receive your initial Poster concepts within 2 working days after submitting the brief. With timely feedback, the full process—including revisions and final delivery takes around 5 to 7 days. Your quick response helps us deliver faster."
-                    },
-                    {
-                      question: "Can I upgrade my package during the order?",
-                      answer: "Yes, absolutely! You can upgrade your package at any point during the process. Simply pay the difference at the time of final delivery it's quick and hassle-free"
-                    },
-                    {
-                      question: "Does Versai Technology offer any discounts?",
-                      answer: "Yes, Versai Technology offers discounts from time to time. Contact us to learn about current promotions and special offers tailored for you."
-                    },
-                    {
-                      question: "How does Versai Technology offer such great value at this price?",
-                      answer: "At Versai Technology, we combine skilled expertise with efficient processes to keep costs low without compromising quality. Our streamlined approach and commitment to innovation allow us to deliver exceptional value. This means you get top-notch services at competitive prices."
-                    }
-                  ]}
-                />
-              </div>
-            )}
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="webHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webCollapse2">
+              How Long Does Versai Technology Take to Development a Website?
+            </button>
+          </h2>
+          <div id="webCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqWeb">
+            <div className="accordion-body">
+              At Versai Technology, you'll receive your initial web Design concepts within 2 working days after submitting the brief. With timely feedback, the full process including revisions, Development and final delivery takes around 10 to 12 days. Your quick response helps us deliver faster.
+            </div>
           </div>
         </div>
-      </main>
+         <div className="accordion-item">
+          <h2 className="accordion-header" id="webHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webCollapse2">
+        Can I upgrade my package during the order?
+            </button>
+          </h2>
+          <div id="webCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqWeb">
+            <div className="accordion-body">
+              Yes, absolutely! You can upgrade your package at any point during the process. Simply pay the difference at the time of final delivery it's quick and hassle-fre
+            </div>
+          </div>
+        </div>
+         <div className="accordion-item">
+          <h2 className="accordion-header" id="webHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webCollapse2">
+            Does Versai Technology offer any discounts?
+            </button>
+          </h2>
+          <div id="webCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqWeb">
+            <div className="accordion-body">
+             Yes, Versai Technology offers discounts from time to time. Contact us to learn about current promotions and special offers tailored for you.
+            </div>
+          </div>
+        </div>
+         <div className="accordion-item">
+          <h2 className="accordion-header" id="webHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webCollapse2">
+         How does Versai Technology offer such great value at this price?
+            </button>
+          </h2>
+          <div id="webCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqWeb">
+            <div className="accordion-body">
+              At Versai Technology, we combine skilled expertise with efficient processes to keep costs low without compromising quality. Our streamlined approach and commitment to innovation allow us to deliver exceptional value. This means you get top-notch services at competitive prices.
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )}
+
+  {activeTab === 'logo' && (
+    <>
+      <h5 className="text-gradient">Step Into Success</h5>
+      <h1 className="fw-bold">Transforming Your Ideas <br />
+into Reality</h1>
+      <p className="text-muted">
+       Schedule a free consultation with our team and let's make things happen!
+      </p>
+      <button className="btn btn-gradient">Contact With Us</button>
+
+      <hr className="my-5" />
+
+      <h4 className="fw-bold">Frequently Asked Questions</h4>
+      <p className="text-muted">
+        Answer To Our Most Frequently Asked Questions are just one Click Away.
+      </p>
+        <hr className="my-5" />
+      <div className="accordion" id="faqLogo">
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="logoHeading1">
+            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#logoCollapse1">
+             Why Should I Choose Versai Technology?
+            </button>
+          </h2>
+          <div id="logoCollapse1" className="accordion-collapse collapse show" data-bs-parent="#faqLogo">
+            <div className="accordion-body">
+             Versai Technology started with excellence in exhibition stall design and now brings you expert logo and graphic design services. Our goal is to craft creative, meaningful visuals that reflect your brand’s true identity and values.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="logoHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#logoCollapse2">
+            How Long Does Versai Technology Take to Design a Logo?
+            </button>
+          </h2>
+          <div id="logoCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqLogo">
+            <div className="accordion-body">
+             At Versai Technology, you'll receive your initial logo concepts within 2 working days after submitting the brief. With timely feedback, the full process—including revisions and final delivery takes around 5 to 7 days. Your quick response helps us deliver faster.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="logoHeading1">
+            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#logoCollapse1">
+        Can I upgrade my package during the order?
+            </button>
+          </h2>
+          <div id="logoCollapse1" className="accordion-collapse collapse show" data-bs-parent="#faqLogo">
+            <div className="accordion-body">
+             Yes, absolutely! You can upgrade your package at any point during the process. Simply pay the difference at the time of final delivery it's quick and hassle-fre
+            </div>
+          </div>
+        </div>
+         <div className="accordion-item">
+          <h2 className="accordion-header" id="logoHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#logoCollapse2">
+             Does Versai Technology offer any discounts?
+            </button>
+          </h2>
+          <div id="logoCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqLogo">
+            <div className="accordion-body">
+             Yes, Versai Technology offers discounts from time to time. Contact us to learn about current promotions and special offers tailored for you.
+            </div>
+          </div>
+        </div>
+         <div className="accordion-item">
+          <h2 className="accordion-header" id="logoHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#logoCollapse2">
+            How does Versai Technology offer such great value at this price?
+            </button>
+          </h2>
+          <div id="logoCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqLogo">
+            <div className="accordion-body">
+             At Versai Technology, we combine skilled expertise with efficient processes to keep costs low without compromising quality. Our streamlined approach and commitment to innovation allow us to deliver exceptional value. This means you get top-notch services at competitive prices.
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </>
+  )}
+
+  {activeTab === 'poster' && (
+    <>
+      <h5 className="text-gradient">Step Into Success</h5>
+      <h1 className="fw-bold">Transforming Your Ideas
+into Reality</h1>
+      <p className="text-muted">
+       Schedule a free consultation with our team and let's make things happen!
+      </p>
+      <button className="btn btn-gradient">Contact With Us</button>
+
+      <hr className="my-5" />
+
+      <h4 className="fw-bold">Frequently Asked Questions</h4>
+      <p className="text-muted">
+       Answer To Our Most Frequently Asked Questions are just one Click Away.
+      </p>
+      <hr className="my-5" />
+      <div className="accordion" id="faqPoster">
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="posterHeading1">
+            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#posterCollapse1">
+          Why Should I Choose Versai Technology?
+            </button>
+          </h2>
+          <div id="posterCollapse1" className="accordion-collapse collapse show" data-bs-parent="#faqPoster">
+            <div className="accordion-body">
+             Versai Technology started with excellence in exhibition stall design and now brings you expert Poster and graphic design services. Our goal is to craft creative, meaningful visuals that reflect your brand’s true identity and values.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="posterHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#posterCollapse2">
+           How Long Does Versai Technology Take to Design a Poster?
+            </button>
+          </h2>
+          <div id="posterCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqPoster">
+            <div className="accordion-body">
+              At Versai Technology, you'll receive your initial Poster concepts within 2 working days after submitting the brief. With timely feedback, the full process—including revisions and final delivery takes around 5 to 7 days. Your quick response helps us deliver faster.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="posterHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#posterCollapse2">
+              Can I upgrade my package during the order?
+            </button>
+          </h2>
+          <div id="posterCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqPoster">
+            <div className="accordion-body">
+             Yes, absolutely! You can upgrade your package at any point during the process. Simply pay the difference at the time of final delivery it's quick and hassle-fre
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="posterHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#posterCollapse2">
+              Does Versai Technology offer any discounts?
+            </button>
+          </h2>
+          <div id="posterCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqPoster">
+            <div className="accordion-body">
+            Yes, Versai Technology offers discounts from time to time. Contact us to learn about current promotions and special offers tailored for you.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="posterHeading2">
+            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#posterCollapse2">
+         How does Versai Technology offer such great value at this price?
+            </button>
+          </h2>
+          <div id="posterCollapse2" className="accordion-collapse collapse" data-bs-parent="#faqPoster">
+            <div className="accordion-body">
+              At Versai Technology, we combine skilled expertise with efficient processes to keep costs low without compromising quality. Our streamlined approach and commitment to innovation allow us to deliver exceptional value. This means you get top-notch services at competitive prices.
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )}
+</div>
+
+
+
+      
 
       {/* Footer */}
       <footer className="mt-5">

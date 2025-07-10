@@ -80,6 +80,8 @@ const Home = () => {
                 </button>
             </div>
             {/* <!-- back to top end --> */}
+          
+
 
             <header>
                 {/* <!-- header-area -start--> */}
@@ -172,33 +174,21 @@ const Home = () => {
             <main>
                 {/* <!-- hero-area-start --> */}
                 <Swiper
-                    modules={[Navigation, Autoplay]}
-                    navigation
-                    loop={true}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                    className="owl-carousel owl-theme"
-                    breakpoints={{
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 20,
-                        },
-                        480: {
-                            slidesPerView: 1,
-                            spaceBetween: 30,
-                        },
-                        768: {
-                            slidesPerView: 1,
-                            spaceBetween: 40,
-                        },
-                        1024: {
-                            slidesPerView: 1,
-                            spaceBetween: 50,
-                        },
-                    }}
-                >
+  modules={[Autoplay]}             // ✅ Removed Navigation
+  loop={true}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+  }}
+  className="owl-carousel owl-theme"
+  breakpoints={{
+    320: { slidesPerView: 1, spaceBetween: 20 },
+    480: { slidesPerView: 1, spaceBetween: 30 },
+    768: { slidesPerView: 1, spaceBetween: 40 },
+    1024: { slidesPerView: 1, spaceBetween: 50 },
+  }}
+>
+
                     <SwiperSlide className="item tg-hero-ptb theme-bg">
                         <div className="container">
                             <div className="row">
