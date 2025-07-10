@@ -393,18 +393,37 @@ const Home = () => {
                         <div className="row">
                             <div className="col-xl-12">
                                 <div className="tg-service-slider-wrap">
-                                    <Swiper
-                                        ref={swiperRef}
-                                        modules={[Autoplay]}
-                                        spaceBetween={30}
-                                        slidesPerView={3}
-                                        loop={true}
-                                        autoplay={{
-                                            delay: 2500,
-                                            disableOnInteraction: false,
-                                        }}
-                                        className="swiper tg-service-active fix"
-                                    >
+                                   <Swiper
+  ref={swiperRef}
+  modules={[Autoplay]}
+  spaceBetween={30}
+  slidesPerView={3}
+  loop={true}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+  }}
+  breakpoints={{
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  }}
+  className="swiper tg-service-active fix"
+>
+
                                         <SwiperSlide>
                                             <div className="tg-service-item">
                                                 <div className="tg-service-icon-box mb-30 d-flex justify-content-between">
