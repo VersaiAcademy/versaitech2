@@ -65,13 +65,38 @@ const Home = () => {
 
     useEffect(() => {
         new PureCounter();
+        
+        // Back to top button functionality
+        const backToTop = document.querySelector(".back-to-top-wrapper");
+        
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add("back-to-top-btn-show");
+            } else {
+                backToTop.classList.remove("back-to-top-btn-show");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
 
     return (
         <>
 
             {/* <!-- back to top start --> */}
-            <div className="back-to-top-wrapper">
+            <div className="back-to-top-wrapper" onClick={scrollToTop}>
                 <button id="back_to_top" type="button" className="back-to-top-btn">
                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 6L6 1L1 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
