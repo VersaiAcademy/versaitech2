@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import "../assets/css/bootstrap.min.css";
@@ -20,9 +20,45 @@ const Contact = () => {
   // Updated embed URL for Versai Academy
   const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.296396456318!2d74.961492!3d28.2982542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39149db0e2a540cf%3A0xd14b579e89103212!2sVERSAI%20ACADEMY%20%7C%7C%20Best%20Computer%20Course%20In%20Churu%2C%20CCC%2C%20Java%2C%20Digital%20Marketing%2C%20PHP%2C%20DTP%2C%20Tally%2C%20Web%20Design%2C%20Basic%20Computer!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin";
 
+    useEffect(() => {
+        // Back to top button functionality
+        const backToTop = document.querySelector(".back-to-top-wrapper");
+        
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add("back-to-top-btn-show");
+            } else {
+                backToTop.classList.remove("back-to-top-btn-show");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
 
   return (
     <>
+      {/* <!-- back to top start --> */}
+      <div className="back-to-top-wrapper" onClick={scrollToTop}>
+          <button id="back_to_top" type="button" className="back-to-top-btn">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 6L6 1L1 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
+                      strokeLinejoin="round" />
+              </svg>
+          </button>
+      </div>
+      {/* <!-- back to top end --> */}
       {/* Your existing header and other components remain the same */}
         {/* <!-- header-area -start--> */}
               <div id="sticky-header" className="tg-header__area black-bg-2 tg-header__mob-space">

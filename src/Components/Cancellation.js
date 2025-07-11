@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import {Link } from 'react-router-dom';
 import "../assets/css/bootstrap.min.css";
@@ -18,15 +18,41 @@ import img2 from '../Components/img2.svg';
 
 
 const Cancellation = () => {
+    useEffect(() => {
+        // Back to top button functionality
+        const backToTop = document.querySelector(".back-to-top-wrapper");
+        
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add("back-to-top-btn-show");
+            } else {
+                backToTop.classList.remove("back-to-top-btn-show");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
   return (
     <>
     
       {/* <!-- back to top start --> */}
-    <div class="back-to-top-wrapper">
-        <button id="back_to_top" type="button" class="back-to-top-btn">
+    <div className="back-to-top-wrapper" onClick={scrollToTop}>
+        <button id="back_to_top" type="button" className="back-to-top-btn">
             <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="round" />
+                <path d="M11 6L6 1L1 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
+                    strokeLinejoin="round" />
             </svg>
         </button>
     </div>
@@ -117,15 +143,15 @@ const Cancellation = () => {
   
 
     {/* <!-- **************Terms & Condition************** --> */}
-    <div class="terms-bg">
-        <div class="container">
-            <div class="terms-cond">
+    <div className="terms-bg">
+        <div className="container">
+            <div className="terms-cond">
                 <div>
-                    {/* <img class="terms-img" src="assets/myimage/rupeesicon.svg" alt=""> */}
+                    {/* <img className="terms-img" src="assets/myimage/rupeesicon.svg" alt=""> */}
                 </div>
 
-                <p class="tersm-para">Cancellation & Refund</p>
-                <p class="term-parades">Your satisfaction is the foundation of our success.</p>
+                <p className="tersm-para">Cancellation & Refund</p>
+                <p className="term-parades">Your satisfaction is the foundation of our success.</p>
 
             </div>
         </div>
@@ -133,22 +159,22 @@ const Cancellation = () => {
 
 
 
-    <div class="container">
-        <div class="line-heading">
-                <div class="privacy-policy">
-                    <div class="lining"></div>
-                    <div class="lining"></div>
-                    <div class="lining"></div>
+    <div className="container">
+        <div className="line-heading">
+                <div className="privacy-policy">
+                    <div className="lining"></div>
+                    <div className="lining"></div>
+                    <div className="lining"></div>
                 </div>
-                <h1 class="terms-heading1">Versai Technology Cancellation & Refund</h1>
-                <div class="privacy-policy">
-                    <div class="lining"></div>
-                    <div class="lining"></div>
-                    <div class="lining"></div>
+                <h1 className="terms-heading1">Versai Technology Cancellation & Refund</h1>
+                <div className="privacy-policy">
+                    <div className="lining"></div>
+                    <div className="lining"></div>
+                    <div className="lining"></div>
                 </div>
             </div>
         
-        <p class="privacy-para">
+        <p className="privacy-para">
             This Privacy Policy has been created to better inform users who are concerned about how their Personally
             Identifiable Information (PII) is collected and used online. PII, as defined under applicable privacy laws
             and data protection standards, refers to information that can be used on its own or in combination with
@@ -158,46 +184,46 @@ const Cancellation = () => {
             manages your Personally Identifiable Information in accordance with our website and services.
         </p>
 
-        <h4 class="terms-heading">What Personal Information Do We Collect from The People That Visit Our Website?</h4>
+        <h4 className="terms-heading">What Personal Information Do We Collect from The People That Visit Our Website?</h4>
 
-        <p class="privacy-para">
+        <p className="privacy-para">
             When ordering or registering on our site, as appropriate, you may be asked to enter your name, email
             address, mailing address, phone number or other details to help you with your experience.
         </p>
 
-        <h4 class="terms-heading">When do We Collect Information?</h4>
+        <h4 className="terms-heading">When do We Collect Information?</h4>
 
-        <p class="the-limit">We Collect Information from You when You</p>
-        <menu class="exp-menu">
-            <li><i class="fas fa-arrow-right pe-2"></i>Fill out a form or enter information on our site.</li>
-            <li><i class="fas fa-arrow-right pe-2"></i>Provide us with feedback on our products or services.</li>
+        <p className="the-limit">We Collect Information from You when You</p>
+        <menu className="exp-menu">
+            <li><i className="fas fa-arrow-right pe-2"></i>Fill out a form or enter information on our site.</li>
+            <li><i className="fas fa-arrow-right pe-2"></i>Provide us with feedback on our products or services.</li>
         </menu>
 
 
-        <h4 class="terms-heading">How do We Protect Visitor Information?</h4>
-        <menu class="exp-menu">
+        <h4 className="terms-heading">How do We Protect Visitor Information?</h4>
+        <menu className="exp-menu">
 
             <li>
-                <i class="fas fa-arrow-right pe-2"></i>Full Refund if the project is not started or the initial design
+                <i className="fas fa-arrow-right pe-2"></i>Full Refund if the project is not started or the initial design
                 is not approved.
             </li>
-            <li><i class="fas fa-arrow-right pe-2"></i>A partial refund may be issued if the initial design is approved
+            <li><i className="fas fa-arrow-right pe-2"></i>A partial refund may be issued if the initial design is approved
                 and you decide to discontinue the project thereafter.</li>
             <li>
-                <i class="fas fa-arrow-right pe-2"></i>No Refund would be entertained if the project has been completed
+                <i className="fas fa-arrow-right pe-2"></i>No Refund would be entertained if the project has been completed
                 and uploaded on the server.
             </li>
         </menu>
 
-        <h4 class="terms-heading">Web Development / Mobile Apps Development:</h4>
+        <h4 className="terms-heading">Web Development / Mobile Apps Development:</h4>
         <p>
             At Versai Technology, we regularly scan our website for security vulnerabilities and known threats to ensure
             a safe and secure browsing experience.
         </p>
 
 
-        <h4 class="terms-heading">We do not Use Malware Scanning.</h4>
-        <p class="privacy-para">Your personal information is stored within secured networks and is accessible only to a limited number of
+        <h4 className="terms-heading">We do not Use Malware Scanning.</h4>
+        <p className="privacy-para">Your personal information is stored within secured networks and is accessible only to a limited number of
             authorized personnel who have special access rights and are required to maintain its confidentiality.
             Additionally, any sensitive or credit-related information you provide is encrypted using Secure Socket Layer
             (SSL) technology.
@@ -205,24 +231,24 @@ const Cancellation = () => {
             submit, or access your information, all to ensure the protection and integrity of your personal data.
         </p>
 
-        <h4 class="terms-heading">Do We Use ‘Cookies’?</h4>
-        <p class="the-limit">We do not Use Cookies for Tracking Purposes</p>
-        <p class="privacy-para">You can choose to have your computer notify you each time a cookie is being sent, or you can opt to disable
+        <h4 className="terms-heading">Do We Use ‘Cookies’?</h4>
+        <p className="the-limit">We do not Use Cookies for Tracking Purposes</p>
+        <p className="privacy-para">You can choose to have your computer notify you each time a cookie is being sent, or you can opt to disable
             all cookies through your browser settings. Since each browser is slightly different, please refer to your
             browser’s Help section to learn how to modify your cookie preferences.
             Please note that if you choose to disable cookies, some features of the Versai Technology website may not
             function properly, and your overall user experience may be less efficient.</p>
 
-        <h4 class="terms-heading">Third-party Links</h4>
+        <h4 className="terms-heading">Third-party Links</h4>
         <p>We do not include or offer third-party products or services on our website.</p>
 
 
-        <h4 class="terms-heading">How does Our Site Handle do not Track Signals?</h4>
+        <h4 className="terms-heading">How does Our Site Handle do not Track Signals?</h4>
         <p>At Versai Technology, we respect Do Not Track (DNT) signals and do not track, place cookies, or use
             advertising when a DNT browser setting is enabled.</p>
 
 
-        <h4 class="terms-heading">Does Our Site Allow Third-party Behavioral Tracking?</h4>
+        <h4 className="terms-heading">Does Our Site Allow Third-party Behavioral Tracking?</h4>
         <p>It’s also important to note that we do not allow third-party behavioral tracking.</p>
 
 

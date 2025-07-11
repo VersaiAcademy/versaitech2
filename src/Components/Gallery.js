@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import "../assets/css/bootstrap.min.css";
@@ -77,14 +77,40 @@ import img74 from '../Components/img74.jpg';
 
 
 const Gallery = () => {
+    useEffect(() => {
+        // Back to top button functionality
+        const backToTop = document.querySelector(".back-to-top-wrapper");
+        
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add("back-to-top-btn-show");
+            } else {
+                backToTop.classList.remove("back-to-top-btn-show");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
     return (
         <>
             {/* <!-- back to top start --> */}
-            <div class="back-to-top-wrapper">
-                <button id="back_to_top" type="button" class="back-to-top-btn">
+            <div className="back-to-top-wrapper" onClick={scrollToTop}>
+                <button id="back_to_top" type="button" className="back-to-top-btn">
                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
+                        <path d="M11 6L6 1L1 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
+                            strokeLinejoin="round" />
                     </svg>
                 </button>
             </div>
@@ -180,16 +206,16 @@ const Gallery = () => {
     <main>
 
         {/* <!-- breadcrumb-area-start --> */}
-        <div class="tg-breadcrumb-area tg-breadcrumb-height tg-breadcrumb-overley black-bg p-relative"
+        <div className="tg-breadcrumb-area tg-breadcrumb-height tg-breadcrumb-overley black-bg p-relative"
             data-background="assets/img/breadcrumb/breadcrumb-1-1.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="tg-breadcrumb__content z-index-3 text-center">
-                            <h3 class="tg-breadcrumb__title">Our <span class="use-gradi">Gallery</span></h3>
-                            <div class="tg-breadcrumb__list">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="tg-breadcrumb__content z-index-3 text-center">
+                            <h3 className="tg-breadcrumb__title">Our <span className="use-gradi">Gallery</span></h3>
+                            <div className="tg-breadcrumb__list">
                                 <span><a href="index.html">Home</a></span>
-                                <span class="dvdr"><i class="fa-solid fa-chevron-right"></i></span>
+                                <span className="dvdr"><i className="fa-solid fa-chevron-right"></i></span>
                                 <span>Gallery</span>
                             </div>
                         </div>
