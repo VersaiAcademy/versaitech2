@@ -19,7 +19,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import PureCounter from '@srexi/purecounterjs';
 import WOW from 'wowjs';
 
@@ -49,6 +49,16 @@ import img17 from '../Components/img17.jpg';
 
 
 const Home = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMobileMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setMenuOpen(false);
+    };
+
     const swiperRef = useRef(null);
 
     const handleNext = () => {
@@ -367,7 +377,7 @@ const Home = () => {
                                             with innovative solutions.</p>
                                     </div>
                                     <div className="tg-hero-button">
-                                        <a className="tg-btn-gradient" href="AboutUs.js">
+                                        <Link className="tg-btn-gradient" to="/AboutUs.js">
                                             Read More
                                             <span>
                                                 <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
@@ -377,7 +387,7 @@ const Home = () => {
                                                         fill="white" />
                                                 </svg>
                                             </span>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -595,7 +605,7 @@ const Home = () => {
                                         </p>
                                     </div>
                                     <div className="tg-project-button">
-                                        <a className="tg-btn-gradient" href="Services.js">
+                                        <Link className="tg-btn-gradient" to="/Services.js">
                                             Read More
                                             <span>
                                                 <svg width="17" height="12" viewBox="0 0 17 12" fill="none"
@@ -605,7 +615,7 @@ const Home = () => {
                                                         fill="white" />
                                                 </svg>
                                             </span>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -719,7 +729,7 @@ const Home = () => {
                             <div className="row">
                                 <div className="col-xl-12">
                                     <div className="tg-exp-item tg-reveal-item p-relative active">
-                                        <a href="Webdevelopment.js">
+                                        <Link to="/Webdevelopment.js">
                                             <div className="row align-items-center">
                                                 <div className="col-xl-6 col-lg-8 col-md-8">
                                                     <div className="tg-exp-content">
@@ -744,13 +754,13 @@ const Home = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </Link>
                                         <div className="tg-reveal-bg" data-background="assets/img/exprience/exp-1.png"></div>
                                     </div>
                                 </div>
                                 <div className="col-xl-12">
                                     <div className="tg-exp-item tg-reveal-item p-relative active">
-                                        <a href="Appdevelopment.js">
+                                        <Link to="/Appdevelopment.js">
                                             <div className="row align-items-center">
                                                 <div className="col-xl-6 col-lg-8 col-md-8">
                                                     <div className="tg-exp-content">
@@ -775,13 +785,13 @@ const Home = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </Link>
                                         <div className="tg-reveal-bg" data-background="assets/img/exprience/exp-1.png"></div>
                                     </div>
                                 </div>
                                 <div className="col-xl-12">
                                     <div className="tg-exp-item tg-reveal-item tg-reveal-border p-relative active">
-                                        <a href="Graphic.js">
+                                        <Link to="/Graphic.js">
                                             <div className="row align-items-center">
                                                 <div className="col-xl-6 col-lg-8 col-md-8">
                                                     <div className="tg-exp-content">
@@ -806,7 +816,7 @@ const Home = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </Link>
                                         <div className="tg-reveal-bg" data-background="assets/img/exprience/exp-1.png"></div>
                                     </div>
                                 </div>
@@ -934,12 +944,12 @@ const Home = () => {
                                     <h4 className="tg-footer-widget-title">Useful Links</h4>
                                     <div className="tg-footer-list">
                                         <ul>
-                                            <li><a href="Home.js"><i className="fa-regular fa-angle-right"></i>Home</a></li>
-                                            <li><a href="AboutUs.js"><i className="fa-regular fa-angle-right"></i>About Us</a>
+                                            <li><Link to="/"><i className="fa-regular fa-angle-right"></i>Home</Link></li>
+                                            <li><Link to="/AboutUs.js"><i className="fa-regular fa-angle-right"></i>About Us</Link>
                                             </li>
-                                            <li><a href="Ourteam.js"><i className="fa-regular fa-angle-right"></i>Team</a></li>
+                                            <li><Link to="/Ourteam.js"><i className="fa-regular fa-angle-right"></i>Team</Link></li>
 
-                                            <li><a href="Gallery.js"><i className="fa-regular fa-angle-right"></i>Gallery</a></li>
+                                            <li><Link to="/Gallery.js"><i className="fa-regular fa-angle-right"></i>Gallery</Link></li>
 
 
                                         </ul>
@@ -956,11 +966,11 @@ const Home = () => {
                                                 target="_blank" rel="noopener noreferrer"><i className="fa-regular fa-angle-right"></i>Apply for
                                                 Internship</a>
                                             </li>
-                                            <li><a href="Career.js"><i className="fa-regular fa-angle-right"></i>Career at
-                                                Versai</a></li>
-                                            <li><a href="Contact.js"><i className="fa-regular fa-angle-right"></i>Contact Us</a>
+                                            <li><Link to="/Career.js"><i className="fa-regular fa-angle-right"></i>Career at
+                                                Versai</Link></li>
+                                            <li><Link to="/Contact.js"><i className="fa-regular fa-angle-right"></i>Contact Us</Link>
                                             </li>
-                                            <li><a href="Services.js"><i className="fa-regular fa-angle-right"></i>Services</a>
+                                            <li><Link to="/Services.js"><i className="fa-regular fa-angle-right"></i>Services</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -973,14 +983,14 @@ const Home = () => {
                                     <h4 className="tg-footer-widget-title">Support</h4>
                                     <div className="tg-footer-list">
                                         <ul>
-                                            <li><a href="Termcondition.js"><i className="fa-regular fa-angle-right"></i>Terms &
-                                                Condition</a></li>
-                                            <li><a href="Cancellation.js"><i
-                                                className="fa-regular fa-angle-right"></i>Cancellation and Refund</a>
+                                            <li><Link to="/Termcondition.js"><i className="fa-regular fa-angle-right"></i>Terms &
+                                                Condition</Link></li>
+                                            <li><Link to="/Cancellation.js"><i
+                                                className="fa-regular fa-angle-right"></i>Cancellation and Refund</Link>
                                             </li>
-                                            <li><a href="Privacy.js"><i className="fa-regular fa-angle-right"></i>Privacy
-                                                Policy</a></li>
-                                            <li><a href="Privacy.js"><i className="fa-regular fa-angle-right"></i>FAQs</a>
+                                            <li><Link to="/Privacy.js"><i className="fa-regular fa-angle-right"></i>Privacy
+                                                Policy</Link></li>
+                                            <li><Link to="/Privacy.js"><i className="fa-regular fa-angle-right"></i>FAQs</Link>
                                             </li>
                                         </ul>
                                     </div>
