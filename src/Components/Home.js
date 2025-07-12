@@ -91,6 +91,7 @@ const Home = () => {
             behavior: "smooth"
         });
     };
+    
 
     return (
         <>
@@ -108,93 +109,91 @@ const Home = () => {
           
 
 
-            <header>
-                {/* <!-- header-area -start--> */}
-                <div id="sticky-header" className="tg-header__area black-bg-2 tg-header__mob-space">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-xl-2 col-lg-4 col-md-4 col-6">
-                                <div className="logo">
-                                    <a href="Home.js">
-                                        <img className="img-fluid" src={img1} alt="img1" />
-
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="col-xl-6  d-none d-xl-block">
-                                <div className="tgmenu__wrap">
-                                    <div className="tgmenu__navbar-wrap tgmenu__main-menu">
-                                        <nav className="tgmenu__nav">
-                                            <ul className="navigation d-xl-flex gap-2 justify-content-center">
-                                                <li className=""><a href="Home.js">Home</a></li>
-
-                                                {/* <a className="dropdown dropdown-toggle" type="" data-bs-toggle="dropdown" aria-expanded="false" >
-                                      About Us
-                                     </a> */}
-
-                                                <li ClassName="menu-item-has-children"><a className="dropdown dropdown-toggle" type="" data-bs-toggle="dropdown" href="/AboutUs.js">About Us<i
-                                                    ClassName="ms-1 fa-solid fa-caret-down"></i></a>
-
-
-                                                    <ul className="dropdown-menu">
-                                                        <li><Link className="dropdown-item" to="/AboutUs.js">About Us</Link></li>
-                                                        <li><Link className="dropdown-item" to="/Ourteam.js">Team</Link></li>
-                                                        <li><Link className="dropdown-item" to="/Portfolio.js">Our Portfolio</Link></li>
-                                                        <li><Link className="dropdown-item" to="/Gallery.js">Gallery</Link></li>
-                                                    </ul>
-                                                </li>
-
-                                                <li className="">
-                                                    <a href="/Services.js">Services</a>
-
-                                                </li>
-
-                                                <li className=""><a href="/Contact.js">Contact</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-8 col-md-8 col-6">
-                                <div className="tgmenu__action-wrap d-flex justify-content-between">
-
-                                    <div className="d-none d-md-flex d-flex gap-3 align-items-center">
-                                        <a className="apply-btn apply-career" href="Career.js">Career at Versai</a>
-                                        <a className="apply-btn apply-intern apply-active"
-                                            href="https://docs.google.com/forms/d/e/1FAIpQLSds9WaOXtaIeKDZBG7o7tqGeDbSy7PASFqcPtnEVBmi9xiLlw/viewform?usp=sharing&ouid=117424442439504764324"
-                                            target="_blank" rel="noopener noreferrer">Apply for Internship</a>
-                                    </div>
-                                    <div className="mobile-nav-toggler d-xl-none ms-auto">
-                                        <i className="text-dark fas fa-bars"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+             <header>
+      <div id="sticky-header" className="tg-header__area black-bg-2 tg-header__mob-space">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-xl-2 col-lg-4 col-md-4 col-6">
+              <div className="logo">
+                <Link to="/">
+                  <img className="img-fluid" src={img1} alt="logo" />
+                </Link>
+              </div>
+            </div>
+            <div className="col-xl-6 d-none d-xl-block">
+              <div className="tgmenu__wrap">
+                <div className="tgmenu__navbar-wrap tgmenu__main-menu">
+                  <nav className="tgmenu__nav">
+                    <ul className="navigation d-xl-flex gap-2 justify-content-center">
+                      <li><Link to="/">Home</Link></li>
+                      <li className="menu-item-has-children dropdown">
+                        <a href="/AboutUs.js" className="dropdown-toggle" data-bs-toggle="dropdown">
+                          About Us <i className="ms-1 fa-solid fa-caret-down"></i>
+                        </a>
+                        <ul className="dropdown-menu">
+                          <li><Link className="dropdown-item" to="/AboutUs.js">About Us</Link></li>
+                          <li><Link className="dropdown-item" to="/Ourteam.js">Team</Link></li>
+                          <li><Link className="dropdown-item" to="/Portfolio.js">Our Portfolio</Link></li>
+                          <li><Link className="dropdown-item" to="/Gallery.js">Gallery</Link></li>
+                        </ul>
+                      </li>
+                      <li><Link to="/Services.js">Services</Link></li>
+                      <li><Link to="/Contact.js">Contact</Link></li>
+                    </ul>
+                  </nav>
                 </div>
-
-                {/* <!-- header-area-end --> */}
-
-                {/* { <!-- Mobile Menu  --> } */}
-                <div className="tgmobile__menu">
-                    <nav className="tgmobile__menu-box">
-                        <div className="close-btn"><i className="fa-sharp fa-regular fa-xmark"></i></div>
-                        <div className="nav-logo">
-                            <a href="Home.js">
-                                <img className="img-fluid" src={img2} alt="img2" />
-                            </a>
-                        </div>
-                        <div className="tgmobile__menu-outer">
-                            {/* <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> */}
-                        </div>
-
-                    </nav>
+              </div>
+            </div>
+            <div className="col-xl-4 col-lg-8 col-md-8 col-6">
+              <div className="tgmenu__action-wrap d-flex justify-content-between">
+                <div className="d-none d-md-flex gap-3 align-items-center">
+                  <Link className="apply-btn apply-career" to="/Career.js">Career at Versai</Link>
+                  <a
+                    className="apply-btn apply-intern apply-active"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSds9WaOXtaIeKDZBG7o7tqGeDbSy7PASFqcPtnEVBmi9xiLlw/viewform?usp=sharing&ouid=117424442439504764324"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Apply for Internship
+                  </a>
                 </div>
-                <div className="tgmobile__menu-backdrop"></div>
-                {/* {/* <!-- End Mobile Menu --> } */}
+                <div className="mobile-nav-toggler d-xl-none ms-auto" onClick={toggleMobileMenu}>
+                  <i className="text-dark fas fa-bars"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      {/* Mobile Menu */}
+      <div className={`tgmobile__menu ${menuOpen ? 'menu-open' : ''}`}>
+        <nav className="tgmobile__menu-box">
+          <div className="close-btn" onClick={closeMobileMenu}>
+            <i className="fa-sharp fa-regular fa-xmark"></i>
+          </div>
+          <div className="nav-logo">
+            <Link to="/">
+              <img className="img-fluid" src={img2} alt="mobile logo" />
+            </Link>
+          </div>
+          <div className="tgmobile__menu-outer">
+            <ul className="mobile-nav">
+              <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
+              <li><Link to="/AboutUs.js" onClick={closeMobileMenu}>About Us</Link></li>
+              <li><Link to="/Ourteam.js" onClick={closeMobileMenu}>Team</Link></li>
+              <li><Link to="/Portfolio.js" onClick={closeMobileMenu}>Our Portfolio</Link></li>
+              <li><Link to="/Gallery.js" onClick={closeMobileMenu}>Gallery</Link></li>
+              <li><Link to="/Services.js" onClick={closeMobileMenu}>Services</Link></li>
+              <li><Link to="/Contact.js" onClick={closeMobileMenu}>Contact</Link></li>
+              <li><Link to="/Career.js" onClick={closeMobileMenu}>Career</Link></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 
-            </header>
+      {menuOpen && <div className="tgmobile__menu-backdrop" onClick={closeMobileMenu}></div>}
+    </header>
 
             <main>
                 {/* <!-- hero-area-start --> */}
